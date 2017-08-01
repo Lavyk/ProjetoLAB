@@ -168,6 +168,7 @@ public class Teste extends javax.swing.JFrame {
         java.awt.GridBagConstraints gridBagConstraints;
 
         menuPanel = new javax.swing.JPanel();
+        jLabel16 = new javax.swing.JLabel();
         menuGeral = new javax.swing.JPanel();
         txtMenuGeral = new javax.swing.JLabel();
         menuCarros = new javax.swing.JPanel();
@@ -245,6 +246,14 @@ public class Teste extends javax.swing.JFrame {
 
         menuPanel.setBackground(new java.awt.Color(35, 40, 44));
         menuPanel.setLayout(new java.awt.GridBagLayout());
+
+        jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/rentCar.png"))); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.SOUTH;
+        gridBagConstraints.insets = new java.awt.Insets(20, 0, 10, 0);
+        menuPanel.add(jLabel16, gridBagConstraints);
 
         menuGeral.setBackground(new java.awt.Color(35, 40, 44));
         menuGeral.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -1288,6 +1297,7 @@ public class Teste extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

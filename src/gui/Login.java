@@ -68,8 +68,8 @@ public class Login extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         passForm = new javax.swing.JPasswordField();
         panelBotoes = new javax.swing.JPanel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
+        btnCloseLogin = new javax.swing.JLabel();
+        btnConfirmLogin = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Login");
@@ -163,23 +163,23 @@ public class Login extends javax.swing.JFrame {
         panelBotoes.setLayout(new java.awt.GridBagLayout());
         jPanel3.add(panelBotoes, new org.netbeans.lib.awtextra.AbsoluteConstraints(83, 211, -1, -1));
 
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/close.png"))); // NOI18N
-        jLabel8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
+        btnCloseLogin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/close.png"))); // NOI18N
+        btnCloseLogin.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnCloseLogin.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel8MouseClicked(evt);
+                btnCloseLoginMouseClicked(evt);
             }
         });
-        jPanel3.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 230, -1, -1));
+        jPanel3.add(btnCloseLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 230, -1, -1));
 
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/confirm.png"))); // NOI18N
-        jLabel9.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabel9.addMouseListener(new java.awt.event.MouseAdapter() {
+        btnConfirmLogin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/confirm.png"))); // NOI18N
+        btnConfirmLogin.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnConfirmLogin.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel9MouseClicked(evt);
+                btnConfirmLoginMouseClicked(evt);
             }
         });
-        jPanel3.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 230, -1, -1));
+        jPanel3.add(btnConfirmLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 230, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -209,11 +209,11 @@ public class Login extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtNomeFocusGained
 
-    private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
+    private void btnCloseLoginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCloseLoginMouseClicked
         dispose();
-    }//GEN-LAST:event_jLabel8MouseClicked
+    }//GEN-LAST:event_btnCloseLoginMouseClicked
 
-    private void jLabel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseClicked
+    private void btnConfirmLoginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnConfirmLoginMouseClicked
         String nome = txtNome.getText();
         String pass = passForm.getText();
         try {
@@ -224,7 +224,7 @@ public class Login extends javax.swing.JFrame {
         } catch (SQLException ex) {
             Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
         }
-    }//GEN-LAST:event_jLabel9MouseClicked
+    }//GEN-LAST:event_btnConfirmLoginMouseClicked
 
     public boolean verificarNome() {
         String nome = txtNome.getText();
@@ -273,12 +273,12 @@ public class Login extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel btnCloseLogin;
+    private javax.swing.JLabel btnConfirmLogin;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel panelBotoes;
     private javax.swing.JPanel panelForm;

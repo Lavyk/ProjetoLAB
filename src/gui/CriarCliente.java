@@ -33,6 +33,8 @@ public class CriarCliente extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
+        btnCloseNovoCliente = new javax.swing.JLabel();
+        btnConfirmNovoCliente = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
@@ -46,8 +48,6 @@ public class CriarCliente extends javax.swing.JFrame {
             jCPF = new javax.swing.JFormattedTextField(cpf);
         }catch(Exception e){
         }
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Novo cliente");
@@ -61,6 +61,24 @@ public class CriarCliente extends javax.swing.JFrame {
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/man.png"))); // NOI18N
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
+
+        btnCloseNovoCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/close.png"))); // NOI18N
+        btnCloseNovoCliente.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnCloseNovoCliente.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnCloseNovoClienteMouseClicked(evt);
+            }
+        });
+        jPanel1.add(btnCloseNovoCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 140, -1, -1));
+
+        btnConfirmNovoCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/confirm.png"))); // NOI18N
+        btnConfirmNovoCliente.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnConfirmNovoCliente.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnConfirmNovoClienteMouseClicked(evt);
+            }
+        });
+        jPanel1.add(btnConfirmNovoCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 140, -1, -1));
 
         jPanel2.setBackground(new java.awt.Color(102, 153, 255));
 
@@ -122,24 +140,6 @@ public class CriarCliente extends javax.swing.JFrame {
 
         jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 280, 70));
 
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/close.png"))); // NOI18N
-        jLabel8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel8MouseClicked(evt);
-            }
-        });
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 140, -1, -1));
-
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/confirm.png"))); // NOI18N
-        jLabel9.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabel9.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel9MouseClicked(evt);
-            }
-        });
-        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 140, -1, -1));
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -159,11 +159,11 @@ public class CriarCliente extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
+    private void btnCloseNovoClienteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCloseNovoClienteMouseClicked
         dispose();
-    }//GEN-LAST:event_jLabel8MouseClicked
+    }//GEN-LAST:event_btnCloseNovoClienteMouseClicked
 
-    private void jLabel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseClicked
+    private void btnConfirmNovoClienteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnConfirmNovoClienteMouseClicked
         ConectarDB conn = new ConectarDB();
 
         if (jNome.getText().equals("")) {
@@ -179,7 +179,7 @@ public class CriarCliente extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Cliente cadastrado com sucesso!");
             new Teste().atualizarListaCarros();
         }
-    }//GEN-LAST:event_jLabel9MouseClicked
+    }//GEN-LAST:event_btnConfirmNovoClienteMouseClicked
 
     /**
      * @param args the command line arguments
@@ -217,13 +217,13 @@ public class CriarCliente extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel btnCloseNovoCliente;
+    private javax.swing.JLabel btnConfirmNovoCliente;
     private javax.swing.JTextField jCPF;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JTextField jNome;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;

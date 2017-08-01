@@ -52,9 +52,9 @@ public class Locadora extends javax.swing.JFrame {
         java.awt.GridBagConstraints gridBagConstraints;
 
         jPanel2 = new javax.swing.JPanel();
-        jLabel8 = new javax.swing.JLabel();
+        btnCloseNovaLocadora = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
+        btnConfirmNovaLocadora = new javax.swing.JLabel();
         panelTitulo = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         panelForm = new javax.swing.JPanel();
@@ -72,26 +72,26 @@ public class Locadora extends javax.swing.JFrame {
         jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/close.png"))); // NOI18N
-        jLabel8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
+        btnCloseNovaLocadora.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/close.png"))); // NOI18N
+        btnCloseNovaLocadora.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnCloseNovaLocadora.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel8MouseClicked(evt);
+                btnCloseNovaLocadoraMouseClicked(evt);
             }
         });
-        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 200, 40, -1));
+        jPanel2.add(btnCloseNovaLocadora, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 200, 40, -1));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/crane.png"))); // NOI18N
         jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, -1, -1));
 
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/confirm.png"))); // NOI18N
-        jLabel9.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabel9.addMouseListener(new java.awt.event.MouseAdapter() {
+        btnConfirmNovaLocadora.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/confirm.png"))); // NOI18N
+        btnConfirmNovaLocadora.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnConfirmNovaLocadora.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel9MouseClicked(evt);
+                btnConfirmNovaLocadoraMouseClicked(evt);
             }
         });
-        jPanel2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 200, -1, -1));
+        jPanel2.add(btnConfirmNovaLocadora, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 200, -1, -1));
 
         panelTitulo.setBackground(new java.awt.Color(102, 153, 255));
 
@@ -184,11 +184,11 @@ public class Locadora extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtNomeActionPerformed
 
-    private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
+    private void btnCloseNovaLocadoraMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCloseNovaLocadoraMouseClicked
         dispose();
-    }//GEN-LAST:event_jLabel8MouseClicked
+    }//GEN-LAST:event_btnCloseNovaLocadoraMouseClicked
 
-    private void jLabel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseClicked
+    private void btnConfirmNovaLocadoraMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnConfirmNovaLocadoraMouseClicked
         if (verificarCampos()) {
             ConectarDB conn = new ConectarDB();
             long capital = Long.valueOf(txtCapital.getText()).longValue();
@@ -209,7 +209,7 @@ public class Locadora extends javax.swing.JFrame {
             dispose();
             new Usuario().setVisible(true);
         }
-    }//GEN-LAST:event_jLabel9MouseClicked
+    }//GEN-LAST:event_btnConfirmNovaLocadoraMouseClicked
 
     public boolean verificarCampos() {
 
@@ -267,12 +267,12 @@ public class Locadora extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel btnCloseNovaLocadora;
+    private javax.swing.JLabel btnConfirmNovaLocadora;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel panelForm;
     private javax.swing.JPanel panelTitulo;

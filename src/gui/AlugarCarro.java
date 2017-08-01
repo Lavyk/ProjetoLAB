@@ -60,8 +60,8 @@ public class AlugarCarro extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         txtCarroDetalhe = new javax.swing.JLabel();
         txtClienteCPF = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
+        btnConfirmarAlugarCarro = new javax.swing.JLabel();
+        btnCloseAlugarCarro = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Alugar carro");
@@ -191,23 +191,23 @@ public class AlugarCarro extends javax.swing.JFrame {
 
         jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 60, 300, 130));
 
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/confirm.png"))); // NOI18N
-        jLabel9.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabel9.addMouseListener(new java.awt.event.MouseAdapter() {
+        btnConfirmarAlugarCarro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/confirm.png"))); // NOI18N
+        btnConfirmarAlugarCarro.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnConfirmarAlugarCarro.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel9MouseClicked(evt);
+                btnConfirmarAlugarCarroMouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 200, -1, -1));
+        jPanel1.add(btnConfirmarAlugarCarro, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 200, -1, -1));
 
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/close.png"))); // NOI18N
-        jLabel8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
+        btnCloseAlugarCarro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/close.png"))); // NOI18N
+        btnCloseAlugarCarro.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnCloseAlugarCarro.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel8MouseClicked(evt);
+                btnCloseAlugarCarroMouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 200, -1, -1));
+        jPanel1.add(btnCloseAlugarCarro, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 200, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -232,9 +232,9 @@ public class AlugarCarro extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_placaSelecionadaActionPerformed
 
-    private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
+    private void btnCloseAlugarCarroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCloseAlugarCarroMouseClicked
         dispose();
-    }//GEN-LAST:event_jLabel8MouseClicked
+    }//GEN-LAST:event_btnCloseAlugarCarroMouseClicked
 
     private void placaSelecionadaItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_placaSelecionadaItemStateChanged
         if (placaSelecionada.getSelectedIndex() == 0) {
@@ -247,7 +247,7 @@ public class AlugarCarro extends javax.swing.JFrame {
 
     }//GEN-LAST:event_placaSelecionadaItemStateChanged
 
-    private void jLabel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseClicked
+    private void btnConfirmarAlugarCarroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnConfirmarAlugarCarroMouseClicked
         if (placaSelecionada.getSelectedIndex() != 0) {
             ConectarDB conn = new ConectarDB();
             String placa = placaSelecionada.getSelectedItem().toString();
@@ -258,7 +258,7 @@ public class AlugarCarro extends javax.swing.JFrame {
         } else {
             JOptionPane.showMessageDialog(null, "Você não pode confirmar sem antes\n selecionar uma placa.");
         }
-    }//GEN-LAST:event_jLabel9MouseClicked
+    }//GEN-LAST:event_btnConfirmarAlugarCarroMouseClicked
 
     /**
      * @param args the command line arguments
@@ -296,13 +296,13 @@ public class AlugarCarro extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel btnCloseAlugarCarro;
+    private javax.swing.JLabel btnConfirmarAlugarCarro;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;

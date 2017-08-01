@@ -33,7 +33,7 @@ public class CriarCarro extends javax.swing.JFrame {
 
         jPanel3 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        btnCloseAddCarro = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jMarca = new javax.swing.JTextField();
@@ -50,7 +50,7 @@ public class CriarCarro extends javax.swing.JFrame {
         }
         jPanel4 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
+        btnConfirmAddCarro = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Novo carro");
@@ -65,14 +65,14 @@ public class CriarCarro extends javax.swing.JFrame {
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/car.png"))); // NOI18N
         jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, -1, -1));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/close.png"))); // NOI18N
-        jLabel6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
+        btnCloseAddCarro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/close.png"))); // NOI18N
+        btnCloseAddCarro.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnCloseAddCarro.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel6MouseClicked(evt);
+                btnCloseAddCarroMouseClicked(evt);
             }
         });
-        jPanel3.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 190, -1, -1));
+        jPanel3.add(btnCloseAddCarro, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 190, -1, -1));
 
         jPanel2.setBackground(new java.awt.Color(102, 102, 102));
         jPanel2.setLayout(new java.awt.GridBagLayout());
@@ -176,14 +176,14 @@ public class CriarCarro extends javax.swing.JFrame {
 
         jPanel3.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 20, 470, 40));
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/confirm.png"))); // NOI18N
-        jLabel7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
+        btnConfirmAddCarro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/confirm.png"))); // NOI18N
+        btnConfirmAddCarro.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnConfirmAddCarro.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel7MouseClicked(evt);
+                btnConfirmAddCarroMouseClicked(evt);
             }
         });
-        jPanel3.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 190, -1, -1));
+        jPanel3.add(btnConfirmAddCarro, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 190, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -212,11 +212,11 @@ public class CriarCarro extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jPlacaKeyTyped
 
-    private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
+    private void btnCloseAddCarroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCloseAddCarroMouseClicked
         dispose();
-    }//GEN-LAST:event_jLabel6MouseClicked
+    }//GEN-LAST:event_btnCloseAddCarroMouseClicked
 
-    private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
+    private void btnConfirmAddCarroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnConfirmAddCarroMouseClicked
         ConectarDB conn = new ConectarDB();
 
         if (jPlaca.getText().equals("   -    ")) {
@@ -235,7 +235,7 @@ public class CriarCarro extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Carro cadastrado com sucesso!");
             new Teste().atualizarListaCarros();
         }
-    }//GEN-LAST:event_jLabel7MouseClicked
+    }//GEN-LAST:event_btnConfirmAddCarroMouseClicked
 
     /**
      * @param args the command line arguments
@@ -276,14 +276,14 @@ public class CriarCarro extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel btnCloseAddCarro;
+    private javax.swing.JLabel btnConfirmAddCarro;
     private javax.swing.JLabel espaco;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JTextField jMarca;
     private javax.swing.JTextField jModelo;
     private javax.swing.JPanel jPanel2;

@@ -68,8 +68,8 @@ public class Usuario extends javax.swing.JFrame {
         passFormConfirm = new javax.swing.JPasswordField();
         panelBotoes = new javax.swing.JPanel();
         confirmSenha = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
+        btnCloseCriarUser = new javax.swing.JLabel();
+        btnConfirmCriarUser = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Criar usuário");
@@ -200,23 +200,23 @@ public class Usuario extends javax.swing.JFrame {
         confirmSenha.setText("Senhas correspondem");
         jPanel3.add(confirmSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 230, -1, -1));
 
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/close.png"))); // NOI18N
-        jLabel8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
+        btnCloseCriarUser.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/close.png"))); // NOI18N
+        btnCloseCriarUser.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnCloseCriarUser.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel8MouseClicked(evt);
+                btnCloseCriarUserMouseClicked(evt);
             }
         });
-        jPanel3.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 260, -1, -1));
+        jPanel3.add(btnCloseCriarUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 260, -1, -1));
 
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/confirm.png"))); // NOI18N
-        jLabel9.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabel9.addMouseListener(new java.awt.event.MouseAdapter() {
+        btnConfirmCriarUser.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/confirm.png"))); // NOI18N
+        btnConfirmCriarUser.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnConfirmCriarUser.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel9MouseClicked(evt);
+                btnConfirmCriarUserMouseClicked(evt);
             }
         });
-        jPanel3.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 260, -1, -1));
+        jPanel3.add(btnConfirmCriarUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 260, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -281,11 +281,11 @@ public class Usuario extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_passFormConfirmKeyReleased
 
-    private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
+    private void btnCloseCriarUserMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCloseCriarUserMouseClicked
         dispose();
-    }//GEN-LAST:event_jLabel8MouseClicked
+    }//GEN-LAST:event_btnCloseCriarUserMouseClicked
 
-    private void jLabel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseClicked
+    private void btnConfirmCriarUserMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnConfirmCriarUserMouseClicked
         ConectarDB conn = new ConectarDB();
         String nome = txtNome.getText();
         pass1 = passForm.getPassword();
@@ -304,7 +304,7 @@ public class Usuario extends javax.swing.JFrame {
         } else if (!verificarPasswords(pass1, pass2)) {
             JOptionPane.showMessageDialog(null, "As senhas não correspondem!");
         }
-    }//GEN-LAST:event_jLabel9MouseClicked
+    }//GEN-LAST:event_btnConfirmCriarUserMouseClicked
 
     public boolean verificarPasswords(char[] pass1, char[] pass2) {
         if (passForm.getText().isEmpty() || passFormConfirm.getText().isEmpty()) {
@@ -363,14 +363,14 @@ public class Usuario extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel btnCloseCriarUser;
+    private javax.swing.JLabel btnConfirmCriarUser;
     private javax.swing.JLabel confirmSenha;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel panelBotoes;
     private javax.swing.JPanel panelForm;
